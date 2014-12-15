@@ -10,6 +10,13 @@ GUI::GUI(){
 
 void GUI::render(bool smell, int level, bool proceed, int moves) const{
 
+    //menu background
+    for (int i = 0; i <= 80 ; i++){
+        for (int j = 45; j <= 48; j++){
+            TCODConsole::root->setCharBackground(i,j,TCODColor::darkestGrey);
+        }
+    }
+
     //render edges in red
     TCODConsole::root->setChar(0,45,201);
     TCODConsole::root->setCharForeground(0,45,borderColor);
